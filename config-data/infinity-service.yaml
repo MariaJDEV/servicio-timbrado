@@ -1,5 +1,5 @@
 server:
-    port: ${PORT:${SERVER_PORT:0}}
+    port: 8091
     logging:
     config: classpath:log4j.xml
 service:
