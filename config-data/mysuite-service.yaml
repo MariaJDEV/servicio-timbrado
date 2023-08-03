@@ -1,0 +1,43 @@
+server:
+    port: ${PORT:${SERVER_PORT:0}}
+    logging:
+    config: classpath:log4j.xml 
+service:
+    base:
+        url: https://api.mysuitetest.com/RequestTransaction
+    name: RequestTransaction
+sqlserver:
+    datasource:
+        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        jdbc-url: jdbc:sqlserver://servdeveloper:1433;databaseName=PerliExpress
+        password: perli
+        username: perli
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: true
+sqlserver2:
+    datasource:
+        driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        jdbc-url: jdbc:sqlserver://servdeveloper:1433;databaseName=BD_PerliCFDI
+        password: perli
+        username: perli
+    hikari:
+        auto-commit: true
+        connection-timeout: 2000
+        idle-timeout: 10000
+        max-lifetime: 1000
+        maximum-pool-size: 10
+        minimum-idle: 10
+    jpa:
+        hibernate:
+            ddl-auto: none
+        show-sql: true
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

@@ -1,0 +1,30 @@
+server:
+  port: 8095
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: servicioConecta-service
+          uri: lb://servicioConecta-service
+          predicates:
+            - Path=/servicioConecta/**
+        - id: mysuite-service
+          uri: lb://mysuite-service
+          predicates:
+            - Path=/mysuite/**
+        - id: infinity-service
+          uri: lb://infinity-service
+          predicates:
+            - Path=/infinity/**
