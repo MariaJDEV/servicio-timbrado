@@ -1,15 +1,7 @@
 server:
     port: ${PORT:${SERVER_PORT:0}}
     logging:
-    config: classpath:log4j.xml      
-service:
-    base:
-        url: http://localhost:8091/api/timbrar
-    name: infinity
-service1:
-    base1:
-        url1: http://localhost:8090/api/timbrarM
-    name1: Mysuite
+    config: classpath:log4j.xml
 sqlserver:
     datasource:
         driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
