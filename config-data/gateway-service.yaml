@@ -19,12 +19,12 @@ spring:
         - id-prefix: mysuite-service
           uri: lb://mysuite-service
           predicates:
-            - Path=/timbrarM/**
+            - Path=/mysuite/**
         - idid-prefix: infinity-service
           uri: lb://infinity-service
           predicates:
-            - Path=/timbrar/**
+            - Path=/infinity/**
         - idid-prefix: servicioConecta-service
           uri: lb://servicioConecta-service
           predicates:
-            - Path=/timbrar/**
+            - Path=/servicioConecta/**
