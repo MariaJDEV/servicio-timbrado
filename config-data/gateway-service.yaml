@@ -16,15 +16,15 @@ spring:
         locator:
           enabled: true
       routes:
-        - id-prefix: mysuite-service
+        - id: mysuite-service
           uri: lb://mysuite-service
           predicates:
             - Path=/mysuite/**
-        - idid-prefix: infinity-service
+        - id: infinity-service
           uri: lb://infinity-service
           predicates:
             - Path=/infinity/**
-        - idid-prefix: servicioConecta-service
+        - id: servicioConecta-service
           uri: lb://servicioConecta-service
           predicates:
             - Path=/servicioConecta/**
