@@ -16,8 +16,8 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: mysuite-service
-          uri: lb://mysuite-service
+        - id: mysuite-service2
+          uri: lb://mysuite-service2
           predicates:
             - Path=/mysuite/**
         - id: infinity-service
