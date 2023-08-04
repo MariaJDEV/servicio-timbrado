@@ -21,10 +21,10 @@ spring:
           predicates:
             - Path=/servicioConecta/**
         - id: mysuite-service
-          uri: http:://localhost:8090/api/timbrarM
+          uri: lb://mysuite-service
           predicates:
             - Path=/mysuite/**
         - id: infinity-service
-          uri: http://localhost:8090/api/timbrar
+          uri: lb://infinity-service
           predicates:
             - Path=/infinity/**
