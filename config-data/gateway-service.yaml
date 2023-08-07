@@ -20,11 +20,3 @@ spring:
           uri: lb://mysuite-service
           predicates:
             - Path=/mysuite/**
-        - id: infinity-service
-          uri: lb://infinity-service
-          predicates:
-            - Path=/infinity/**
-        - id: servicioConecta-service
-          uri: lb://servicioConecta-service
-          predicates:
-            - Path=/servicioConecta/**
